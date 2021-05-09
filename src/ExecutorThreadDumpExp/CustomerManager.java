@@ -1,8 +1,8 @@
+package ExecutorThreadDumpExp;
+
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 
 public class CustomerManager {
@@ -21,16 +21,16 @@ public class CustomerManager {
   public Customer getNextCustomer() {
     //should do:
     //customers.remove(0);
-//    customers.get(0);
-    Customer customer = null;
+   return customers.get(0);
+   /* Customer customer = null;
     synchronized (this) {
       if (customer == null) {
         if (customers.size() > 0) {
           customer = customers.remove(0);
         }
       }
-    }
-    return customer;
+    }*/
+   // return customer;
   }
 
   public void howManyCustomers() {

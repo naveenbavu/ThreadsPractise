@@ -1,6 +1,7 @@
 package threadsexp.latch;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Naveen Bavu
@@ -15,8 +16,8 @@ public class AssignTaskManagerTest {
 
     devTeamA.start();
     devTeamB.start();
-
-    countDownLatch.await();
+    System.out.println("Get count :"+countDownLatch.getCount());
+    countDownLatch.await(1000, TimeUnit.MILLISECONDS);
 
     QATeam qaTeam = new QATeam("QA Team");
     qaTeam.start();
