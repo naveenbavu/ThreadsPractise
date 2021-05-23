@@ -20,9 +20,9 @@ public class CustomerManager {
 
   public Customer getNextCustomer() {
     //should do:
-    //customers.remove(0);
-   return customers.get(0);
-   /* Customer customer = null;
+//  return  customers.remove(0);
+  return customers.get(0);
+   /*  Customer customer = null;
     synchronized (this) {
       if (customer == null) {
         if (customers.size() > 0) {
